@@ -13,14 +13,16 @@ footer styles
 
 html {
   font-size: 12px;
+  background-color: hsl(273, 75%, 66%);
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat center;
+  background-size: cover;
 }
 
 body {
   font-size: 1em;
   font-family: 'Kumbh Sans', sans-serif;
   width: 100%;
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  background-size: cover;
+  
 }
 
 main {
@@ -51,8 +53,9 @@ main {
   margin-top: 150px;
   margin-bottom: 85px;
   padding-top: 140px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   border-radius: 25px;
+  box-sizing: border-box;
 }
 
 .faq .container {
@@ -61,6 +64,10 @@ main {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+h1 {
+  padding-bottom: 23px;
 }
 
 /*********************** QUESTIONS *********************/
@@ -80,8 +87,30 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
 }
 
+.answer {
+  padding-bottom: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.rotation {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform = rotate(180deg);
+}
 
 
 /************************* FOOTER *********************/
