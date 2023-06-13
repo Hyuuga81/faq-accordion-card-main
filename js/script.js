@@ -1,21 +1,28 @@
-const qblock = document.querySelectorAll(".q-block");
+const qna = document.querySelectorAll('.qna');
 
-/*for (let item of qblock)*/ 
- qblock.forEach(function (item) {
-    item.addEventListener("click", function () {
-        let question = document.querySelector(".question");
-        let answer = document.querySelector(".answer");
-        let pointer = document.querySelector(".pointer");
+for (let item of qna) {
+    const arrow = item.querySelector('.q-block img');
+    const answer = item.querySelector('.answer');
+    const question = item.querySelector('.question');
 
-        if (!pointer.classList.contains("rotation")) {
-            pointer.classList.add("rotation")
-            answer.classList.remove("hide");
-            question.style.fontWeight = "bolder";
+    question.addEventListener('click', function() {
+        showAnswer();
+    });
+
+    arrow.addEventListener('click', function() {
+        showAnswer();
+    });
+
+    // Function to show answer
+    const showAnswer = () => {
+        if (answer.classList.contains('hide')) {
+            answer.classList.remove('hide');
+            question.style.fontWeight = 'bolder';
+            arrow.style.transform = 'rotate(180deg)';
         } else {
-            pointer.classList.remove("rotation");
-            answer.classList.add("hide");
-            question.style.fontWeight = "normal";
+            answer.classList.add('hide');
+            question.style.fontWeight = 'normal';
+            arrow.style.transform = 'rotate(360deg)';
         }
-        
-    }); 
- });
+    };
+}
